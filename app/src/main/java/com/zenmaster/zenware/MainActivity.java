@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ctx = this;
+        getSupportActionBar().hide();
 
         findViewById(R.id.main_btn_morning).setOnClickListener(this);
         findViewById(R.id.main_btn_evening).setOnClickListener(this);
