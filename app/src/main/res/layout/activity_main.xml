@@ -7,12 +7,49 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Zen Aware"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.061" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="478dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <Button
+            android:id="@+id/main_btn_morning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Poranek" />
+
+        <Button
+            android:id="@+id/main_btn_afternoon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Południe" />
+
+        <Button
+            android:id="@+id/main_btn_evening"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Popołudnie" />
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
