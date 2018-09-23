@@ -85,7 +85,7 @@
     </RadioGroup>
 
     <SeekBar
-        android:id="@+id/seekBar2"
+        android:id="@+id/morning_sb_mood"
         style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="359dp"
         android:layout_height="53dp"
@@ -95,20 +95,12 @@
         tools:layout_editor_absoluteY="549dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/morning_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="save"
         tools:layout_editor_absoluteX="158dp"
         tools:layout_editor_absoluteY="410dp" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="save"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="623dp" />
 
 
 </android.support.constraint.ConstraintLayout>
