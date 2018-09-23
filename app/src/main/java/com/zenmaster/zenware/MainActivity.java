@@ -25,16 +25,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.main_btn_morning) {
-            Intent intent = new Intent(ctx, MainActivity.class);
-            Toast.makeText(ctx,
-                    "change the MainActivity.class to your desire to make it work", Toast.LENGTH_LONG)
-                    .show();
+            Intent intent = new Intent(ctx, MorningActivity.class);
             startActivity(intent);
         } else if (v.getId() == R.id.main_btn_afternoon) {
-            Intent intent = new Intent(ctx, MainActivity.class);
-            Toast.makeText(ctx,
-                    "change the MainActivity.class to your desire to make it work", Toast.LENGTH_LONG)
-                    .show();
+            Intent intent = new Intent(ctx, NoonActivity.class);
             startActivity(intent);
         } else if (v.getId() == R.id.main_btn_evening) {
             Intent intent = new Intent(ctx, MainActivity.class);
