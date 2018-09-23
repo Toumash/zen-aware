@@ -39,7 +39,7 @@ public abstract class ZenAwareDb extends RoomDatabase {
         if (INSTANCE == null) {
           INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
             ZenAwareDb.class, "zenaware_database")
-            .addCallback(sRoomDatabaseCallback)
+            //.addCallback(sRoomDatabaseCallback)
             .build();
         }
       }

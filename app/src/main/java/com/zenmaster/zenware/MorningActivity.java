@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.zenmaster.zenware.model.MoodEntry;
 import com.zenmaster.zenware.viewmodel.MoodViewModel;
 
+import java.util.Date;
 import java.util.List;
 
 public class MorningActivity extends FragmentActivity implements View.OnClickListener {
@@ -39,6 +40,7 @@ public class MorningActivity extends FragmentActivity implements View.OnClickLis
       MoodEntry mood = new MoodEntry();
       SeekBar sb = findViewById(R.id.morning_sb_mood);
       mood.setMoodScore(sb.getProgress());
+      mood.setDate(new Date());
       mWordViewModel.insert(mood);
       Toast.makeText(ctx, "added new mood entry", Toast.LENGTH_SHORT).show();
       this.finish();
