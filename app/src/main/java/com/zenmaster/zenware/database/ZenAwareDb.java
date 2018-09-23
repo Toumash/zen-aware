@@ -13,7 +13,10 @@ import com.zenmaster.zenware.Converters;
 import com.zenmaster.zenware.dao.MoodEntryDao;
 import com.zenmaster.zenware.model.MoodEntry;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 @SuppressWarnings("unused")
 @Database(entities = {MoodEntry.class}, version = 1, exportSchema = false)
@@ -60,7 +63,12 @@ public abstract class ZenAwareDb extends RoomDatabase {
       MoodEntry entry = new MoodEntry();
       entry.setId(0);
       Date d = new Date();
-      d.setYear(2007);
+      SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss", Locale.ENGLISH);
+      try {
+        d = dt.parse("2017-09-24 01:05:00");
+      } catch (ParseException e) {
+        e.printStackTrace();
+      }
       entry.setDate(d);
       mDao.insert(entry);
       mDao.insert(entry);

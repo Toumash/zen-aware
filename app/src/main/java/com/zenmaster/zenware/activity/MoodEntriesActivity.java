@@ -24,8 +24,10 @@ import com.zenmaster.zenware.database.ZenAwareDb;
 import com.zenmaster.zenware.model.MoodEntry;
 import com.zenmaster.zenware.viewmodel.MoodViewModel;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 public class MoodEntriesActivity extends FragmentActivity {
   private MoodViewModel mWordViewModel;
@@ -68,7 +70,8 @@ class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordViewHolde
   public void onBindViewHolder(WordViewHolder holder, int position) {
     if (mWords != null) {
       MoodEntry current = mWords.get(position);
-      holder.dateView.setText(String.valueOf(current.getDate().getTime()));
+      SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss", Locale.ENGLISH);
+      holder.dateView.setText(dt.format(current.getDate()));
       holder.sleepView.setText(String.valueOf(current.getSleepHours()));
       holder.scoreView.setText(String.valueOf(current.getMoodScore()));
     } else {
