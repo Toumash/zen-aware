@@ -5,60 +5,74 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
-@SuppressWarnings("NullableProblems")
+import java.util.Date;
+
+@SuppressWarnings({"NullableProblems", "unused"})
 @Entity(tableName = "mood_entries")
 public class MoodEntry {
 
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "id")
-  private int mId;
+  private int id;
 
   @ColumnInfo(name = "mood_score")
-  private int mMoodScore;
+  private int moodScore;
 
   @ColumnInfo(name = "sleep_hours")
-  private int mSleepHours;
+  private int sleepHours;
 
   @ColumnInfo(name = "spacial_event")
-  private String mSpecialEvent;
+  private String specialEvent;
+
+  @ColumnInfo(name = "date")
+  private Date date;
 
   public MoodEntry() {
   }
 
   @NonNull
-  public int getmId() {
-    return mId;
+  public int getId() {
+    return id;
   }
 
-  public MoodEntry setmId(@NonNull int mId) {
-    this.mId = mId;
+  public MoodEntry setId(@NonNull int id) {
+    this.id = id;
     return this;
   }
 
-  public int getmMoodScore() {
-    return mMoodScore;
+  public int getMoodScore() {
+    return moodScore;
   }
 
-  public MoodEntry setmMoodScore(int mMoodScore) {
-    this.mMoodScore = mMoodScore;
+  public MoodEntry setMoodScore(int moodScore) {
+    this.moodScore = moodScore;
     return this;
   }
 
-  public int getmSleepHours() {
-    return mSleepHours;
+  public int getSleepHours() {
+    return sleepHours;
   }
 
-  public MoodEntry setmSleepHours(int mSleepHours) {
-    this.mSleepHours = mSleepHours;
+  public MoodEntry setSleepHours(int sleepHours) {
+    this.sleepHours = sleepHours;
     return this;
   }
 
-  public String getmSpecialEvent() {
-    return mSpecialEvent;
+  public String getSpecialEvent() {
+    return specialEvent;
   }
 
-  public MoodEntry setmSpecialEvent(String mSpecialEvent) {
-    this.mSpecialEvent = mSpecialEvent;
+  public MoodEntry setSpecialEvent(String specialEvent) {
+    this.specialEvent = specialEvent;
+    return this;
+  }
+
+  public Date getDate() {
+    return date;
+  }
+
+  public MoodEntry setDate(Date date) {
+    this.date = date;
     return this;
   }
 }
