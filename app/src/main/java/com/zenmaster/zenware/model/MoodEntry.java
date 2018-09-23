@@ -30,49 +30,43 @@ public class MoodEntry {
   public MoodEntry() {
   }
 
-  @NonNull
   public int getId() {
     return id;
   }
 
-  public MoodEntry setId(@NonNull int id) {
+  public void setId(int id) {
     this.id = id;
-    return this;
   }
 
   public int getMoodScore() {
     return moodScore;
   }
 
-  public MoodEntry setMoodScore(int moodScore) {
+  public void setMoodScore(int moodScore) {
     this.moodScore = moodScore;
-    return this;
   }
 
   public int getSleepHours() {
     return sleepHours;
   }
 
-  public MoodEntry setSleepHours(int sleepHours) {
+  public void setSleepHours(int sleepHours) {
     this.sleepHours = sleepHours;
-    return this;
   }
 
   public String getSpecialEvent() {
     return specialEvent;
   }
 
-  public MoodEntry setSpecialEvent(String specialEvent) {
+  public void setSpecialEvent(String specialEvent) {
     this.specialEvent = specialEvent;
-    return this;
   }
 
   public Date getDate() {
     return date;
   }
 
-  public MoodEntry setDate(Date date) {
+  public void setDate(Date date) {
     this.date = date;
-    return this;
   }
 }

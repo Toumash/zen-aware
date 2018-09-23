@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">ZenAware</string>
+  <string name="app_name">ZenAware</string>
+  <string name="title_activity_mood_entries">MoodEntries</string>
 </resources>
