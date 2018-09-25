@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Toast;
 
 import com.zenmaster.zenware.R;
 
@@ -34,10 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       Intent intent = new Intent(ctx, NoonActivity.class);
       startActivity(intent);
     } else if (v.getId() == R.id.main_btn_evening) {
-      Intent intent = new Intent(ctx, MainActivity.class);
-      Toast.makeText(ctx,
-        "change the MainActivity.class to your desire to make it work", Toast.LENGTH_LONG)
-        .show();
+      Intent intent = new Intent(ctx, EveningActivity.class);
       startActivity(intent);
     } else if (v.getId() == R.id.main_btn_entries) {
       startActivity(new Intent(ctx, MoodEntriesActivity.class));

@@ -19,7 +19,10 @@
     <activity android:name=".activity.MorningActivity" />
     <activity
       android:name=".activity.MoodEntriesActivity"
-      android:label="@string/title_activity_mood_entries"></activity>
+      android:label="@string/title_activity_mood_entries" />
+    <activity
+      android:name=".activity.EveningActivity"
+      android:label="@string/title_activity_evening"></activity>
   </application>
 
 </manifest>
