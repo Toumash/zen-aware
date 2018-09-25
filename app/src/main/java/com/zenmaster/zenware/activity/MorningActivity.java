@@ -1,4 +1,4 @@
-package com.zenmaster.zenware;
+package com.zenmaster.zenware.activity;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
+import com.zenmaster.zenware.R;
 import com.zenmaster.zenware.model.MoodEntry;
 import com.zenmaster.zenware.viewmodel.MoodViewModel;
 

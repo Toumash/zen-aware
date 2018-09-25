@@ -1,4 +1,4 @@
-package com.zenmaster.zenware;
+package com.zenmaster.zenware.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
-import com.zenmaster.zenware.activity.MoodEntriesActivity;
+import com.zenmaster.zenware.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
   Context ctx;
