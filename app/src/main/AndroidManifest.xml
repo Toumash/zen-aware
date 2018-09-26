@@ -23,6 +23,11 @@
     <activity
       android:name=".activity.EveningActivity"
       android:label="@string/title_activity_evening"></activity>
+
+    <receiver android:name=".broadcast.NotificationPublisher">
+
+    </receiver>
   </application>
+
 
 </manifest>

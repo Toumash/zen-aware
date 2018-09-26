@@ -2,4 +2,6 @@
   <string name="app_name">ZenAware</string>
   <string name="title_activity_mood_entries">MoodEntries</string>
   <string name="title_activity_evening">EveningActivity</string>
+  <string name="channel_description">Notifications about daily mood status updates</string>
+  <string name="channel_name">zenaware.reminders</string>
 </resources>
