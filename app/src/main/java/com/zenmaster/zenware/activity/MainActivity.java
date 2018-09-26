@@ -85,6 +85,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Notification.Builder builder = new Notification.Builder(this);
     builder.setContentTitle(title);
     builder.setContentText(description);
+
+    Intent notifyIntent = new Intent(this, MorningActivity.class);
+    notifyIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK
+      | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+    PendingIntent notifyPendingIntent = PendingIntent.getActivity(
+      this, 0, notifyIntent, PendingIntent.FLAG_UPDATE_CURRENT
+    );
+    builder.setContentIntent(notifyPendingIntent);
+
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
       builder.setChannelId(NotificationPublisher.CHANNEL_REMINDERS);
     }

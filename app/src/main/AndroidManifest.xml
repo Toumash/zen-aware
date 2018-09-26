@@ -12,21 +12,23 @@
     <activity android:name=".activity.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
+        <action android:name="android.intent.action.VIEW" />
 
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:name=".activity.MorningActivity" />
+    <activity
+      android:name=".activity.MorningActivity"
+      android:launchMode="singleTask"
+      android:taskAffinity="" />
     <activity
       android:name=".activity.MoodEntriesActivity"
       android:label="@string/title_activity_mood_entries" />
     <activity
       android:name=".activity.EveningActivity"
-      android:label="@string/title_activity_evening"></activity>
+      android:label="@string/title_activity_evening" />
 
-    <receiver android:name=".broadcast.NotificationPublisher">
-
-    </receiver>
+    <receiver android:name=".broadcast.NotificationPublisher" />
   </application>
 
 
