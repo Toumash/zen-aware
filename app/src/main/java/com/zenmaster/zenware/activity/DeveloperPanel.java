@@ -1,6 +1,5 @@
 package com.zenmaster.zenware.activity;
 
-import android.app.Activity;
 import android.app.Notification;
 import android.content.Context;
 import android.os.Bundle;
@@ -28,14 +27,24 @@ public class DeveloperPanel extends AppCompatActivity implements View.OnClickLis
     notificationManager = NotificationManagerCompat.from(this);
     zenRemindersService = new ZenRemindersService(this);
     findViewById(R.id.dev_btn_firemorning).setOnClickListener(this);
+    findViewById(R.id.dev_btn_firenoon).setOnClickListener(this);
+    findViewById(R.id.dev_btn_fireevening).setOnClickListener(this);
   }
 
   @Override
   public void onClick(View view) {
     switch (view.getId()) {
       case R.id.dev_btn_firemorning:
-        Notification notification = zenRemindersService.createMorningNotification();
-        notificationManager.notify(1, notification);
+        Notification morningNotify = zenRemindersService.createMorningNotification();
+        notificationManager.notify(1, morningNotify);
+        break;
+      case R.id.dev_btn_firenoon:
+        Notification noonNotify = zenRemindersService.createNoonNotification();
+        notificationManager.notify(1, noonNotify);
+        break;
+      case R.id.dev_btn_fireevening:
+        Notification eveningNotify = zenRemindersService.createEveningNotification();
+        notificationManager.notify(1, eveningNotify);
         break;
     }
   }
