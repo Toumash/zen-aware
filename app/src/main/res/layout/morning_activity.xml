@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".activity.MainActivity"
     tools:layout_editor_absoluteY="25dp">
 
     <TextView
@@ -64,7 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="<6" />
+            android:text="&lt;6" />
 
         <RadioButton
             android:id="@+id/radioButton2"
@@ -90,7 +90,7 @@
     </RadioGroup>
 
     <SeekBar
-        android:id="@+id/seekBar2"
+        android:id="@+id/morning_sb_mood"
         style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="359dp"
         android:layout_height="53dp"
@@ -104,7 +104,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
-        android:id="@+id/save1"
+        android:id="@+id/morning_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -117,20 +117,6 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radio_group" />
-
-    <Button
-        android:id="@+id/save2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="save"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seekBar2" />
 
 
 </android.support.constraint.ConstraintLayout>
