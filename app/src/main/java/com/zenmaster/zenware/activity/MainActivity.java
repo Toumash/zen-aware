@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     ctx = this;
-    
+
     ActionBar actionBar = getSupportActionBar();
     if (actionBar != null)
       actionBar.hide();
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     findViewById(R.id.main_btn_afternoon).setOnClickListener(this);
     findViewById(R.id.main_btn_entries).setOnClickListener(this);
 
-    new ZenRemindersService(this).DisplayMorningNotification();
+    new ZenRemindersService(this).ScheduleAllNotifications();
   }
 
 

@@ -9,11 +9,15 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
-import android.os.SystemClock;
+import android.util.Log;
 
 import com.zenmaster.zenware.R;
+import com.zenmaster.zenware.activity.EveningActivity;
 import com.zenmaster.zenware.activity.MorningActivity;
+import com.zenmaster.zenware.activity.NoonActivity;
 import com.zenmaster.zenware.broadcast.NotificationPublisher;
+
+import java.util.Calendar;
 
 public class ZenRemindersService {
 
@@ -24,10 +28,28 @@ public class ZenRemindersService {
     this.ctx = ctx;
   }
 
-  public void DisplayMorningNotification() {
+  public void ScheduleAllNotifications() {
+    ScheduleMorningNotification();
+    ScheduleNoonNotification();
+    ScheduleEveningNotification();
+  }
+
+  public void ScheduleMorningNotification() {
     CreateChannelId();
     Notification notification = getNotification("Poranny nastrój", "Jak ci minął ranek?", MorningActivity.class);
-    scheduleNotification(notification, 5000);
+    scheduleNotification(notification, 9, 15);
+  }
+
+  public void ScheduleNoonNotification() {
+    CreateChannelId();
+    Notification notification = getNotification("Połowa dnia za tobą!", "Jak się czujesz?", NoonActivity.class);
+    scheduleNotification(notification, 14, 15);
+  }
+
+  public void ScheduleEveningNotification() {
+    CreateChannelId();
+    Notification notification = getNotification("Wieczór!", "Wypoczywasz?", EveningActivity.class);
+    scheduleNotification(notification, 19, 15);
   }
 
   private void CreateChannelId() {
@@ -49,18 +71,30 @@ public class ZenRemindersService {
     }
   }
 
-  private void scheduleNotification(Notification notification, int delay) {
+  @SuppressWarnings("SameParameterValue")
+  private void scheduleNotification(Notification notification, int hour, int minute) {
 
     Intent notificationIntent = new Intent(ctx, NotificationPublisher.class);
     notificationIntent.putExtra(NotificationPublisher.NOTIFICATION_ID, 1);
     notificationIntent.putExtra(NotificationPublisher.NOTIFICATION, notification);
     PendingIntent pendingIntent = PendingIntent.getBroadcast(ctx, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
-    long futureInMillis = SystemClock.elapsedRealtime() + delay;
     AlarmManager alarmManager = (AlarmManager) ctx.getSystemService(Context.ALARM_SERVICE);
-    alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, futureInMillis, pendingIntent);
+    if (alarmManager == null)
+      Log.e("Reminders", "alarm manager is null");
+
+    Calendar now = Calendar.getInstance();
+    Calendar alarm = Calendar.getInstance();
+    alarm.set(Calendar.HOUR_OF_DAY, hour);
+    alarm.set(Calendar.MINUTE, minute);
+    long alarmMillis = alarm.getTimeInMillis();
+    if (alarm.before(now)) alarmMillis += 86400000L;
+
+    //noinspection ConstantConditions
+    alarmManager.setInexactRepeating(AlarmManager.RTC, alarmMillis, AlarmManager.INTERVAL_DAY, pendingIntent);
   }
 
+  @SuppressWarnings("SameParameterValue")
   private Notification getNotification(String title, String description, Class<?> activityToRun) {
     Notification.Builder builder = new Notification.Builder(ctx);
     builder.setContentTitle(title);
