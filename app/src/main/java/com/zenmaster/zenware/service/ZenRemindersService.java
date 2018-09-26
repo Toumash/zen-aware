@@ -36,20 +36,34 @@ public class ZenRemindersService {
 
   public void ScheduleMorningNotification() {
     CreateChannelId();
-    Notification notification = getNotification("Poranny nastrój", "Jak ci minął ranek?", MorningActivity.class);
+    Notification notification = createMorningNotification();
     scheduleNotification(notification, 9, 15);
+  }
+
+  // TODO: move the static method factories into the notification factory
+  // instaead of reminders scheduler service
+  public Notification createMorningNotification() {
+    return getNotification("Poranny nastrój", "Jak ci minął ranek?", MorningActivity.class);
   }
 
   public void ScheduleNoonNotification() {
     CreateChannelId();
-    Notification notification = getNotification("Połowa dnia za tobą!", "Jak się czujesz?", NoonActivity.class);
+    Notification notification = createNoonNotification();
     scheduleNotification(notification, 14, 15);
+  }
+
+  public Notification createNoonNotification() {
+    return getNotification("Połowa dnia za tobą!", "Jak się czujesz?", NoonActivity.class);
   }
 
   public void ScheduleEveningNotification() {
     CreateChannelId();
-    Notification notification = getNotification("Wieczór!", "Wypoczywasz?", EveningActivity.class);
+    Notification notification = createEveningNotification();
     scheduleNotification(notification, 19, 15);
+  }
+
+  public Notification createEveningNotification() {
+    return getNotification("Wieczór!", "Wypoczywasz?", EveningActivity.class);
   }
 
   private void CreateChannelId() {

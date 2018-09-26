@@ -19,6 +19,7 @@
     </activity>
     <activity
       android:name=".activity.MorningActivity"
+      android:excludeFromRecents="true"
       android:launchMode="singleTask"
       android:taskAffinity="" />
     <activity
