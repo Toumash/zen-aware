@@ -2,20 +2,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
   android:layout_height="wrap_content"
-  android:orientation="vertical">
+  android:orientation="vertical"
+  android:paddingStart="15dp"
+  android:paddingEnd="15dp"
+  >
 
   <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
     <TextView
-      style="@style/word_title"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="Date:"/>
     <TextView
       android:id="@+id/mood_date"
-      style="@style/word_title"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content" />
   </LinearLayout>
@@ -24,13 +25,11 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal">
     <TextView
-      style="@style/word_title"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="Score:"/>
     <TextView
       android:id="@+id/mood_score"
-      style="@style/word_title"
       android:layout_width="match_parent"
       android:layout_height="wrap_content" />
   </LinearLayout>
@@ -39,13 +38,11 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal">
     <TextView
-      style="@style/word_title"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="Sleep:"/>
     <TextView
       android:id="@+id/mood_sleep"
-      style="@style/word_title"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content" />
   </LinearLayout>

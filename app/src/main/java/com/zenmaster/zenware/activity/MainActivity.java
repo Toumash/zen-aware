@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     findViewById(R.id.main_btn_evening).setOnClickListener(this);
     findViewById(R.id.main_btn_afternoon).setOnClickListener(this);
     findViewById(R.id.main_btn_entries).setOnClickListener(this);
+    findViewById(R.id.main_btn_developermenu).setOnClickListener(this);
 
     new ZenRemindersService(this).ScheduleAllNotifications();
   }
@@ -45,6 +46,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       startActivity(intent);
     } else if (v.getId() == R.id.main_btn_entries) {
       startActivity(new Intent(ctx, MoodEntriesActivity.class));
+    } else if (v.getId() == R.id.main_btn_developermenu) {
+      startActivity(new Intent(ctx, DeveloperPanel.class));
     }
   }
 }
