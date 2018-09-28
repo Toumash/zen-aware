@@ -15,6 +15,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="40dp"
         android:text="morning"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +40,7 @@
         android:id="@+id/textView3"
         android:layout_width="69dp"
         android:layout_height="28dp"
-        android:layout_marginBottom="216dp"
+        android:layout_marginBottom="176dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:text="mood now"
@@ -51,13 +52,16 @@
         android:id="@+id/radio_group"
         android:layout_width="69dp"
         android:layout_height="100dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="64dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/morning_save"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.049">
 
         <RadioButton
             android:id="@+id/radioButton1"
@@ -94,11 +98,13 @@
         style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="359dp"
         android:layout_height="53dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:max="10"
         android:progress="3"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -107,16 +113,14 @@
         android:id="@+id/morning_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="60dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="save"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/morning_sb_mood"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radio_group" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
