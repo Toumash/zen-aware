@@ -70,6 +70,7 @@ class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordViewHolde
         holder.dateView.setText("Invalid date");
       holder.sleepView.setText(String.valueOf(current.getSleepHours()));
       holder.scoreView.setText(String.valueOf(current.getMoodScore()));
+      holder.eventView.setText(String.valueOf(current.getSpecialEvent()));
     } else {
       // Covers the case of data not being ready yet.
       holder.dateView.setText("No date");
@@ -94,12 +95,14 @@ class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordViewHolde
     private final TextView scoreView;
     private final TextView dateView;
     private final TextView sleepView;
+    private final TextView eventView;
 
     private WordViewHolder(View itemView) {
       super(itemView);
       dateView = itemView.findViewById(R.id.mood_date);
       scoreView = itemView.findViewById(R.id.mood_score);
       sleepView = itemView.findViewById(R.id.mood_sleep);
+      eventView = itemView.findViewById(R.id.mood_event);
     }
   }
 }
