@@ -19,6 +19,7 @@
     </activity>
     <activity
       android:name=".activity.MorningActivity"
+      android:excludeFromRecents="true"
       android:launchMode="singleTask"
       android:taskAffinity="" />
     <activity
@@ -29,7 +30,15 @@
       android:label="@string/title_activity_evening" />
 
     <receiver android:name=".broadcast.NotificationPublisher" />
-  </application>
 
+    <activity
+      android:name=".activity.DeveloperPanel"
+      android:label="@string/title_activity_developer_panel"
+      android:parentActivityName=".activity.MainActivity">
+      <meta-data
+        android:name="android.support.PARENT_ACTIVITY"
+        android:value="com.zenmaster.zenware.activity.MainActivity" />
+    </activity>
+  </application>
 
 </manifest>

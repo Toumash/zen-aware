@@ -4,4 +4,5 @@
   <string name="title_activity_evening">EveningActivity</string>
   <string name="channel_description">Notifications about daily mood status updates</string>
   <string name="channel_name">zenaware.reminders</string>
+  <string name="title_activity_developer_panel">DeveloperPanel</string>
 </resources>
