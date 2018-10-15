@@ -28,6 +28,9 @@
     <activity
       android:name=".activity.EveningActivity"
       android:label="@string/title_activity_evening" />
+    <activity
+        android:name=".activity.NoonActivity"
+        android:label="NoonActivity" />
 
     <receiver android:name=".broadcast.NotificationPublisher" />
 

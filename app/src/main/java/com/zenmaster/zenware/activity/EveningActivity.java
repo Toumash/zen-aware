@@ -37,9 +37,6 @@ public class EveningActivity extends FragmentActivity implements View.OnClickLis
     if (v.getId() == R.id.evening_bt_save) {
       MoodEntry mood = new MoodEntry();
       SeekBar sb = findViewById(R.id.evening_sk_mood);
-      TextInputLayout event_name = findViewById(R.id.evening_et_event);
-
-      mood.setSpecialEvent(event_name.getEditText().getText().toString());
       mood.setMoodScore(sb.getProgress());
       mood.setDate(new Date());
       mWordViewModel.insert(mood);
