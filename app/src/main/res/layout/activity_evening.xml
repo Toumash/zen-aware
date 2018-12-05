@@ -5,7 +5,8 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   tools:context=".activity.MainActivity"
-  tools:layout_editor_absoluteY="25dp">
+  tools:layout_editor_absoluteY="25dp"
+   >
 
   <TextView
       android:id="@+id/textView"
@@ -18,64 +19,123 @@
       android:text="Evening"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+      app:layout_constraintTop_toTopOf="parent"
+      />
 
   <TextView
-      style="@style/Mood"
       android:id="@+id/textView3"
+      style="@style/Mood"
       android:layout_width="wrap_content"
-      android:layout_height="0dp"
+      android:layout_height="40dp"
       android:layout_marginEnd="8dp"
       android:layout_marginStart="8dp"
-      android:layout_marginTop="40dp"
+      android:layout_marginTop="36dp"
+      android:layout_marginBottom="36dp"
       android:text="@string/mood"
       android:textAppearance="@style/TextAppearance.AppCompat.Display1"
       app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.509"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 
-  <SeekBar
+    <com.xw.repo.BubbleSeekBar
+        android:id="@+id/evening_sk_mood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        app:bsb_bubble_color="@color/DeepOrange"
+        app:bsb_bubble_text_color="@android:color/white"
+        app:bsb_max="6"
+        app:bsb_min="1"
+        app:bsb_progress="1"
+        app:bsb_second_track_color="@color/DeepOrange"
+        app:bsb_section_count="5"
+        app:bsb_section_text_position="bottom_sides"
+        app:bsb_show_progress_in_float="false"
+        app:bsb_show_section_mark="true"
+        app:bsb_show_section_text="true"
+        app:bsb_show_thumb_text="true"
+        app:bsb_track_color="@color/DeepOrange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+    <!-- <SeekBar
       android:id="@+id/evening_sk_mood"
       style="@style/Widget.AppCompat.SeekBar.Discrete"
-      android:layout_width="275dp"
-      android:layout_height="54dp"
-      android:layout_margin="25sp"
+      android:layout_width="288dp"
+      android:layout_height="29dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="36dp"
+      android:layout_marginEnd="8dp"
+      android:clickable="true"
       android:max="10"
       android:progress="3"
-      app:layout_constraintBottom_toTopOf="@+id/textView5"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.509"
+      app:layout_constraintHorizontal_bias="0.505"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/textView3"
-      app:layout_constraintVertical_bias="0.0" />
+      app:layout_constraintTop_toBottomOf="@+id/textView3" /> -->
 
-    <TextView
-        android:id="@+id/textView5"
-        style="@style/Default"
-        android:layout_width="wrap_content"
-        android:layout_height="59dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="How loved/lonely?"
-        app:layout_constraintBottom_toTopOf="@+id/evening_bt_save"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/evening_sk_mood" />
-
-  <Button
-      android:id="@+id/evening_bt_save"
+  <TextView
+      android:id="@+id/textView5"
+      style="@style/Default"
       android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
+      android:layout_height="49dp"
       android:layout_marginEnd="8dp"
       android:layout_marginStart="8dp"
-      android:text="Save"
-      app:layout_constraintBottom_toBottomOf="parent"
+      android:layout_marginTop="60dp"
+      android:text="Eaten properly today?"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/textView5" />
+      app:layout_constraintTop_toBottomOf="@+id/evening_sk_mood" />
+
+
+    <RadioButton
+        android:id="@+id/yes_button"
+        style="@style/Default"
+        android:layout_width="79dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:text="Yes"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        />
+
+  <RadioButton
+      style="@style/Default"
+      android:textSize="25dp"
+      android:id="@+id/no_button"
+      android:layout_width="79dp"
+      android:layout_height="41dp"
+      android:layout_marginBottom="8dp"
+      android:layout_marginEnd="8dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="4dp"
+      android:text="No"
+      app:layout_constraintBottom_toTopOf="@+id/evening_bt_save"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.502"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/yes_button"
+      app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/evening_bt_save"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/DeepOrange"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>

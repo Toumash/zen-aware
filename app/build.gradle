@@ -36,4 +36,6 @@ dependencies {
     implementation "android.arch.lifecycle:extensions:$rootProject.archLifecycleVersion"
     annotationProcessor "android.arch.lifecycle:compiler:$rootProject.archLifecycleVersion"
     implementation 'com.android.support:design:28.0.0'
+
+    implementation 'com.xw.repo:bubbleseekbar:3.5-lite'
 }

@@ -7,11 +7,13 @@ import android.app.Activity;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
+import android.widget.RadioButton;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
 import com.zenmaster.zenware.R;
 import com.zenmaster.zenware.model.MoodEntry;
+import com.zenmaster.zenware.model.TimeOfDay;
 import com.zenmaster.zenware.viewmodel.MoodViewModel;
 
 import java.util.Date;
@@ -37,8 +39,11 @@ public class EveningActivity extends FragmentActivity implements View.OnClickLis
     if (v.getId() == R.id.evening_bt_save) {
       MoodEntry mood = new MoodEntry();
       SeekBar sb = findViewById(R.id.evening_sk_mood);
+      RadioButton rb_yes = findViewById(R.id.yes_button);
+      mood.setWellEaten(rb_yes.isChecked());
       mood.setMoodScore(sb.getProgress());
       mood.setDate(new Date());
+      mood.setTimeOfDay(TimeOfDay.Evening.toString());
       mWordViewModel.insert(mood);
       Toast.makeText(ctx, "added new mood entry", Toast.LENGTH_SHORT).show();
       this.finish();

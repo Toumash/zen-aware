@@ -68,9 +68,12 @@ class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordViewHolde
         holder.dateView.setText(dt.format(current.getDate()));
       else
         holder.dateView.setText("Invalid date");
+
+      holder.timeOfDay.setText(String.valueOf(current.getTimeOfDay()));
       holder.sleepView.setText(String.valueOf(current.getSleepHours()));
       holder.scoreView.setText(String.valueOf(current.getMoodScore()));
       holder.eventView.setText(String.valueOf(current.getSpecialEvent()));
+      holder.wellEaten.setText(String.valueOf(current.getSpecialEvent()));
     } else {
       // Covers the case of data not being ready yet.
       holder.dateView.setText("No date");
@@ -96,6 +99,8 @@ class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordViewHolde
     private final TextView dateView;
     private final TextView sleepView;
     private final TextView eventView;
+    private final TextView wellEaten;
+    private final TextView timeOfDay;
 
     private WordViewHolder(View itemView) {
       super(itemView);
@@ -103,6 +108,8 @@ class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordViewHolde
       scoreView = itemView.findViewById(R.id.mood_score);
       sleepView = itemView.findViewById(R.id.mood_sleep);
       eventView = itemView.findViewById(R.id.mood_event);
+      wellEaten = itemView.findViewById(R.id.mood_eat);
+      timeOfDay = itemView.findViewById(R.id.time_of_day);
     }
   }
 }

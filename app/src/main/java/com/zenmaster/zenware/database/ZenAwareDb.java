@@ -19,7 +19,7 @@ import java.util.Date;
 import java.util.Locale;
 
 @SuppressWarnings("unused")
-@Database(entities = {MoodEntry.class}, version = 1, exportSchema = false)
+@Database(entities = {MoodEntry.class}, version = 2, exportSchema = false)
 @TypeConverters({Converters.class})
 public abstract class ZenAwareDb extends RoomDatabase {
   private static volatile ZenAwareDb INSTANCE;
@@ -39,7 +39,8 @@ public abstract class ZenAwareDb extends RoomDatabase {
         if (INSTANCE == null) {
           INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
             ZenAwareDb.class, "zenaware_database")
-            //.addCallback(sRoomDatabaseCallback)
+                  .fallbackToDestructiveMigration()
+            .addCallback(sRoomDatabaseCallback)
             .build();
         }
       }

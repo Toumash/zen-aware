@@ -7,6 +7,22 @@
   android:paddingEnd="15dp">
 
   <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time of day:" />
+
+    <TextView
+        android:id="@+id/time_of_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+  </LinearLayout>
+
+  <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
@@ -68,5 +84,21 @@
       android:id="@+id/mood_event"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eating:" />
+
+    <TextView
+        android:id="@+id/mood_eat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
   </LinearLayout>
 </LinearLayout>

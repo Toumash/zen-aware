@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.zenmaster.zenware.R;
 import com.zenmaster.zenware.model.MoodEntry;
+import com.zenmaster.zenware.model.TimeOfDay;
 import com.zenmaster.zenware.viewmodel.MoodViewModel;
 
 import java.util.Date;
@@ -42,6 +43,7 @@ public class MorningActivity extends FragmentActivity implements View.OnClickLis
       SeekBar sb = findViewById(R.id.morning_sb_mood);
       mood.setMoodScore(sb.getProgress());
       mood.setDate(new Date());
+      mood.setTimeOfDay(TimeOfDay.Morning.toString());
       mWordViewModel.insert(mood);
       Toast.makeText(ctx, "added new mood entry", Toast.LENGTH_SHORT).show();
       this.finish();
