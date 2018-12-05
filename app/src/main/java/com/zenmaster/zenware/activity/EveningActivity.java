@@ -11,6 +11,7 @@ import android.widget.RadioButton;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
+import com.xw.repo.BubbleSeekBar;
 import com.zenmaster.zenware.R;
 import com.zenmaster.zenware.model.MoodEntry;
 import com.zenmaster.zenware.model.TimeOfDay;
@@ -38,7 +39,7 @@ public class EveningActivity extends FragmentActivity implements View.OnClickLis
   public void onClick(View v) {
     if (v.getId() == R.id.evening_bt_save) {
       MoodEntry mood = new MoodEntry();
-      SeekBar sb = findViewById(R.id.evening_sk_mood);
+      BubbleSeekBar sb = findViewById(R.id.evening_sk_mood);
       RadioButton rb_yes = findViewById(R.id.yes_button);
       mood.setWellEaten(rb_yes.isChecked());
       mood.setMoodScore(sb.getProgress());

@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
+import com.xw.repo.BubbleSeekBar;
 import com.zenmaster.zenware.R;
 import com.zenmaster.zenware.model.MoodEntry;
 import com.zenmaster.zenware.model.TimeOfDay;
@@ -40,7 +41,7 @@ public class MorningActivity extends FragmentActivity implements View.OnClickLis
   public void onClick(View v) {
     if (v.getId() == R.id.morning_save) {
       MoodEntry mood = new MoodEntry();
-      SeekBar sb = findViewById(R.id.morning_sb_mood);
+      BubbleSeekBar sb = findViewById(R.id.morning_sb_mood);
       mood.setMoodScore(sb.getProgress());
       mood.setDate(new Date());
       mood.setTimeOfDay(TimeOfDay.Morning.toString());
