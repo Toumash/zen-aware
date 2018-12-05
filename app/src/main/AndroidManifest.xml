@@ -1,47 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.zenmaster.zenware">
+    package="com.zenmaster.zenware">
 
-  <application
-    android:allowBackup="true"
-    android:icon="@mipmap/ic_launcher"
-    android:label="@string/app_name"
-    android:roundIcon="@mipmap/ic_launcher_round"
-    android:supportsRtl="true"
-    android:theme="@style/AppTheme">
-    <activity android:name=".activity.MainActivity">
-      <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-        <action android:name="android.intent.action.VIEW" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
-        <category android:name="android.intent.category.LAUNCHER" />
-      </intent-filter>
-    </activity>
-    <activity
-      android:name=".activity.MorningActivity"
-      android:excludeFromRecents="true"
-      android:launchMode="singleTask"
-      android:taskAffinity="" />
-    <activity
-      android:name=".activity.MoodEntriesActivity"
-      android:label="@string/title_activity_mood_entries" />
-    <activity
-      android:name=".activity.EveningActivity"
-      android:label="@string/title_activity_evening" />
-    <activity
-        android:name=".activity.NoonActivity"
-        android:label="NoonActivity" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
 
-    <receiver android:name=".broadcast.NotificationPublisher" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MorningActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:taskAffinity="" />
+        <activity
+            android:name=".activity.MoodEntriesActivity"
+            android:label="@string/title_activity_mood_entries" />
+        <activity
+            android:name=".activity.EveningActivity"
+            android:label="@string/title_activity_evening" />
+        <activity
+            android:name=".activity.NoonActivity"
+            android:label="NoonActivity" />
 
-    <activity
-      android:name=".activity.DeveloperPanel"
-      android:label="@string/title_activity_developer_panel"
-      android:parentActivityName=".activity.MainActivity">
-      <meta-data
-        android:name="android.support.PARENT_ACTIVITY"
-        android:value="com.zenmaster.zenware.activity.MainActivity" />
-    </activity>
-  </application>
+        <receiver android:name=".broadcast.NotificationPublisher" />
 
+        <activity
+            android:name=".activity.DeveloperPanel"
+            android:label="@string/title_activity_developer_panel"
+            android:parentActivityName=".activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.zenmaster.zenware.activity.MainActivity" />
+        </activity>
+    </application>
 </manifest>
