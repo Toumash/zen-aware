@@ -12,14 +12,14 @@
         style="@style/Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="44dp"
         android:text="Morning"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,78 +28,84 @@
         style="@style/Default"
         android:layout_width="250dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
-        android:text="How much sleep?"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="8dp"
+        android:text="I slept today ... hours"
+        android:textAlignment="textStart"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.406"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/morning_sb_mood" />
 
     <TextView
         android:id="@+id/textView3"
-        style="@style/Mood"
+        style="@style/Default"
         android:layout_width="311dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="384dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:text="@string/mood"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="93dp" />
 
     <RadioGroup
-        android:id="@+id/radio_group"
-        android:layout_width="72dp"
-        android:layout_height="96dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/morning_save"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.69">
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
 
         <RadioButton
             android:id="@+id/radioButton1"
-            android:layout_width="wrap_content"
+            android:layout_width="112dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="&lt;6" />
+            android:text="less than 6"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="329dp" />
 
         <RadioButton
             android:id="@+id/radioButton2"
-            android:layout_width="wrap_content"
+            android:layout_width="52dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="6-7" />
+            android:text="7"
+            tools:layout_editor_absoluteX="123dp"
+            tools:layout_editor_absoluteY="329dp" />
 
         <RadioButton
             android:id="@+id/radioButton3"
-            android:layout_width="wrap_content"
+            android:layout_width="52dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="7-8" />
+            android:text="8"
+            tools:layout_editor_absoluteX="173dp"
+            tools:layout_editor_absoluteY="329dp" />
 
         <RadioButton
             android:id="@+id/radioButton4"
-            android:layout_width="wrap_content"
+            android:layout_width="122dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text=">8" />
-
+            android:text="more than 8"
+            tools:layout_editor_absoluteX="220dp"
+            tools:layout_editor_absoluteY="329dp" />
     </RadioGroup>
+
 
     <com.xw.repo.BubbleSeekBar
         android:id="@+id/morning_sb_mood"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_width="322dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="12dp"
         app:bsb_bubble_color="@color/DeepOrange"
         app:bsb_bubble_text_color="@android:color/white"
         app:bsb_max="6"
@@ -114,7 +120,7 @@
         app:bsb_show_thumb_text="true"
         app:bsb_track_color="@color/DeepOrange"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
     <Button
@@ -129,6 +135,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:background="@color/DeepOrange"/>
+
+
 
 
 </android.support.constraint.ConstraintLayout>
