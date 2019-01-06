@@ -39,8 +39,6 @@ public class NoonActivity extends FragmentActivity implements View.OnClickListen
         if (v.getId() == R.id.noon_bt_save) {
 
             MoodEntry mood = new MoodEntry();
-            TextInputLayout event_name = findViewById(R.id.input);
-            mood.setSpecialEvent(event_name.getEditText().getText().toString());
             SeekBar sb = findViewById(R.id.noon_sk_mood);
             mood.setMoodScore(sb.getProgress());
             mood.setDate(new Date());

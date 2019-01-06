@@ -8,20 +8,20 @@
   tools:layout_editor_absoluteY="25dp"
     >
 
-  <TextView
-      android:layout_margin="20dp"
-      android:id="@+id/textView"
-      style="@style/Title"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="8dp"
-      android:layout_marginTop="4dp"
-      android:layout_marginEnd="8dp"
-      android:text="Evening"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.501"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+  <!--<TextView-->
+      <!--android:layout_margin="20dp"-->
+      <!--android:id="@+id/textView"-->
+      <!--style="@style/Title"-->
+      <!--android:layout_width="wrap_content"-->
+      <!--android:layout_height="wrap_content"-->
+      <!--android:layout_marginStart="8dp"-->
+      <!--android:layout_marginTop="4dp"-->
+      <!--android:layout_marginEnd="8dp"-->
+      <!--android:text="Evening"-->
+      <!--app:layout_constraintEnd_toEndOf="parent"-->
+      <!--app:layout_constraintHorizontal_bias="0.501"-->
+      <!--app:layout_constraintStart_toStartOf="parent"-->
+      <!--app:layout_constraintTop_toTopOf="parent" />-->
 
   <TextView
       android:id="@+id/textView3"
@@ -99,7 +99,7 @@
       android:layout_width="345dp"
       android:layout_height="24dp"
       android:layout_margin="20dp"
-      android:layout_marginTop="8dp"
+      android:layout_marginTop="36dp"
       app:bsb_bubble_color="@color/BlueViolet"
       app:bsb_bubble_text_color="@android:color/white"
       app:bsb_max="4"
@@ -114,7 +114,7 @@
       app:bsb_show_thumb_text="true"
       app:bsb_track_color="@color/BlueViolet"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.571"
+      app:layout_constraintHorizontal_bias="0.512"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -125,11 +125,11 @@
       android:layout_height="45dp"
       android:layout_margin="20dp"
       android:layout_marginStart="8dp"
-      android:layout_marginTop="28dp"
+      android:layout_marginTop="84dp"
       android:layout_marginEnd="8dp"
       android:text="I exercised at least 20 min"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.273"
+      app:layout_constraintHorizontal_bias="0.506"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/evening_eating" />
 
@@ -143,10 +143,10 @@
       android:orientation="horizontal"
       app:layout_constraintBottom_toTopOf="@+id/evening_bt_save"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.19"
+      app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/textView4"
-      app:layout_constraintVertical_bias="0.152">
+      app:layout_constraintVertical_bias="0.157">
 
     <RadioButton
 
